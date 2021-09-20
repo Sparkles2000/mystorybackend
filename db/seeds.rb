@@ -16,3 +16,13 @@ post2 = Post.create!(title: 'Does anyone feel like me?', text: 'I have been cont
 post3 = Post.create!(title: 'I hate being here!', text: 'I have been cutting myself. Everyone makes fun of me for being ugly. Why am I here.', user_id: user3.id)
 post4 = Post.create!(title: 'My family threatened to take my life away!', text: 'I ran away from home but my parents found me. They locked me in a closet. I am scared.', user_id: user1.id)
     
+tag1 = Tag.create!(text: 'beating')
+tag2 = Tag.create!(text: 'bullying')
+tag3 = Tag.create!(text: 'anger')
+tag4 = Tag.create!(text: 'pain')
+tag5 = Tag.create!(text: 'self harm')
+tag6 = Tag.create!(text: 'neglect')
+tag7 = Tag.create!(text: 'domestic violence')
+tag8 = Tag.create!(text: 'depression')
+tag9 = Tag.create!(text: 'suicide')
+tag10 = Tag.create!(text: 'abuse')
