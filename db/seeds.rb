@@ -10,3 +10,9 @@
 user1 = User.create!(alias: 'Lonely Angel')
 user2 = User.create!(alias: 'Lost Angel')
 user3 = User.create!(alias: 'Lonely Heart')
+
+post1 = Post.create!(title: 'I feel my life is in danger please help!', text: 'I get beaten for no reason and I have nowhere to go. What should I do', user_id: user1.id) 
+post2 = Post.create!(title: 'Does anyone feel like me?', text: 'I have been contemplating suicide. I feel like no one cares.', user_id: user2.id)
+post3 = Post.create!(title: 'I hate being here!', text: 'I have been cutting myself. Everyone makes fun of me for being ugly. Why am I here.', user_id: user3.id)
+post4 = Post.create!(title: 'My family threatened to take my life away!', text: 'I ran away from home but my parents found me. They locked me in a closet. I am scared.', user_id: user1.id)
+    
