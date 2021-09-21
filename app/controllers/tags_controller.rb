@@ -5,7 +5,7 @@ class TagsController < ApplicationController
     end
     def show
         tag = Tag.find(params[:id])
-        render json: tag, include: :post_tags
+        render json: tag
     rescue ActiveRecord::RecordNotFound
         render json: "Tag not found", status: :not_found
     end
@@ -27,6 +27,6 @@ class TagsController < ApplicationController
     private
 
     def tag_params
-        params.permit(:text, :post_id)
+        params.permit(:text)
     end  
 end
