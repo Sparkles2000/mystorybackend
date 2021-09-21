@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts 'Clearing old data...'
+
+User.destroy_all
+Post.destroy_all
+Tag.destroy_all
+PostTag.destroy_all
 
 user1 = User.create!(alias: 'Lonely Angel')
 user2 = User.create!(alias: 'Lost Angel')
@@ -40,3 +46,6 @@ comment10 = Comment.create!(alias: 'Betty Peterson', text: 'Are you ok? That is 
 comment11 = Comment.create!(alias: 'Lost Angel', text: 'My parents keep a close eye on me I am using a cell phone someone gave me from school. I managed to keep the cellphone hidden.', post_id: post4.id)
 comment12 = Comment.create!(alias: 'Betty Peterson', text: 'Can your friend call the police for you.', post_id: post4.id)
 comment13 = Comment.create!(alias: 'Lost Angel', text: 'No the police took me back to my parents.', post_id: post4.id)
+
+puts 'Users, Posts, Tags, PostTags & Comments all seeded'
+puts 'Seeded'
