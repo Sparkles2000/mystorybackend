@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
     def show
         user = User.find(params[:id])
-        render json: user, include: :posts, only: [:title, :text]
+        render json: user, include: :posts, exclude: [:id, :created_at, :updated_at]
     rescue ActiveRecord::RecordNotFound
         render json: "User not found", status: :not_found
     end

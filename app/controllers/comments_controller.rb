@@ -5,7 +5,7 @@ class CommentsController < ApplicationController
     end
     def show
         comment = Comment.find(params[:id])
-        render json: comment
+        render json: comment, exclude: [:id, created_at, :updated_at]
     rescue ActiveRecord::RecordNotFound
         render json: "Comment not found", status: :not_found
     end
