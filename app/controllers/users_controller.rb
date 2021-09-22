@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
     def index
         users = User.all
-        render json: users
         render json: users, only: [:alias, :img_url, :age, :story]
     end
     def show
