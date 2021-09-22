@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
     def index
         users = User.all
-        render json: users, only: :alias
+        render json: users
+        render json: user, exclude: [:id, :created_at, :updated_at]
     end
     def show
         user = User.find(params[:id])

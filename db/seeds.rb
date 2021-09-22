@@ -13,9 +13,9 @@ Post.destroy_all
 Tag.destroy_all
 PostTag.destroy_all
 
-user1 = User.create!(alias: 'Lonely Angel')
-user2 = User.create!(alias: 'Lost Angel')
-user3 = User.create!(alias: 'Lonely Heart')
+user1 = User.create!(alias: 'Lonely Angel', img_url: 'https://unsplash.com/photos/5N2_UF9HIW8', age: 12, story: 'I am an only child and I am looking for a way out')
+user2 = User.create!(alias: 'Lost Angel', img_url:'https://unsplash.com/photos/rX12B5uX7QM', age:  10, story: 'I live with my parents who do not even notice anything that happens to me')
+user3 = User.create!(alias: 'Lonely Heart', img_url: 'https://unsplash.com/photos/IHj0xtWtLKE', age: 14, story: 'I am a loner and can not stand being bullied')
 
 post1 = Post.create!(title: 'I feel my life is in danger please help!', text: 'I get beaten for no reason and I have nowhere to go. What should I do', user_id: user1.id) 
 post2 = Post.create!(title: 'Does anyone feel like me?', text: 'I have been contemplating suicide. I feel like no one cares.', user_id: user2.id)
