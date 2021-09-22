@@ -28,6 +28,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:alias)
+        params.permit(:alias :img_url, :age, :story)
     end  
 end
