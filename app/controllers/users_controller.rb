@@ -2,7 +2,7 @@ class UsersController < ApplicationController
     def index
         users = User.all
         render json: users
-        render json: user, exclude: [:id, :created_at, :updated_at]
+        render json: user, exclude: [:alias, :img_url, :age, :story]
     end
     def show
         user = User.find(params[:id])
@@ -28,6 +28,6 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:alias :img_url, :age, :story)
+        params.permit(:alias, :img_url, :age, :story)
     end  
 end
