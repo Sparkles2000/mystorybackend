@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     end
     def show
         post = Post.find(params[:id])
-        render json: post, include: :comments, exclude: [:id, created_at, :updated_at]
+        render json: post, include: :comments, exclude: [:id, :created_at, :updated_at]
     rescue ActiveRecord::RecordNotFound
         render json: "Post not found", status: :not_found
     end

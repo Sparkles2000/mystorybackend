@@ -5,7 +5,7 @@ class TagsController < ApplicationController
     end
     def show
         tag = Tag.find(params[:id])
-        render json: tag, exclude: [:id, created_at, :updated_at]
+        render json: tag, exclude: [:id, :created_at, :updated_at]
     rescue ActiveRecord::RecordNotFound
         render json: "Tag not found", status: :not_found
     end
